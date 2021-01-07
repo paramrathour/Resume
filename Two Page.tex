@@ -1,0 +1,262 @@
+\documentclass[a4paper]{article}
+
+\usepackage[parfill]{parskip}
+\setlength{\parindent}{0em}
+
+\usepackage{microtype}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{textcomp}
+\setlist[itemize]{leftmargin=*}
+\setlist[description]{leftmargin=*}
+
+\addtolength{\parskip}{-0.55em}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\scriptsize$\bullet$}}$}
+\newcommand{\lhs}[1]{{\textit{#1}}}
+\newcommand{\lhsmall}[1]{{\small{\textit{#1}}}}
+\newcommand{\rhs}[1]{\hfill{\small{\textsl{(#1)}}}}
+\newcommand{\rhsmall}[1]{\hfill{\footnotesize{\textsl{(#1)}}}}
+\newcommand{\rhse}[1]{\hfill{\small{\textsl{(#1)}}}\\[-12pt]}
+\newcommand{\head}[1]{{\CFont{\textbf{#1}}}}
+
+\usepackage{graphicx}
+\usepackage[dvipsnames]{xcolor}
+\definecolor{DarkBlue}{RGB}{2,7,128}
+
+\usepackage{geometry}
+\geometry{
+	margin = 0.75in, bmargin = 0.1in, tmargin = 0.4in
+}
+
+\usepackage{float}
+\usepackage{ragged2e}
+\usepackage{titlesec}
+\titleformat{\section}{\vspace{-1.4em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
+\titleformat{\subsection}{\vspace{-1.4em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
+\usepackage{hyperref}
+\usepackage{fancyhdr}
+\fancypagestyle{firstpage}
+{
+	\headheight = 158pt
+	\fancyhf{}
+}
+\usepackage{comment}
+%\renewcommand\familydefault{\sfdefault}
+\renewcommand*{\thefootnote}{\fnsymbol{footnote}}
+\renewcommand{\headrulewidth}{0pt}
+\newcommand{\CFont}{\fontsize{11}{13.2}\selectfont}
+\begin{document}
+\thispagestyle{firstpage}
+\pagenumbering{gobble}
+Pursuing \textbf{Honours} in \textbf{Electrical Engineering}\\
+Pursuing \textbf{Minor} in \textbf{Computer Science \& Engineering}% and \textbf{Data Science}
+\section{Scholastic Achievements}
+\begin{itemize}
+	\item Secured \textbf{All India Rank 926} in \textbf{JEE Advanced} among 161 thousand candidates\rhsmall{2019}
+	\item Secured \textbf{99.9\%} percentile in \textbf{JEE Main} among 1.1 million candidates\rhsmall{2019}
+	\item Scored \textbf{418} marks out of 450 in \textbf{BITSAT}\rhsmall{2019}
+	\item Secured \textbf{99.92\%} percentile in \textbf{MHT-CET} among 270 thousand candidates\rhsmall{2019}
+	\item Statewise top 1\% in the National Standard Examination in Astronomy \textbf{(NSEA)} and National Standard\\Examination in Chemistry \textbf{(NSEC)} conducted by Indian Association of Physics Teachers \textbf{(IAPT)}\rhsmall{2019}
+	%\item Secured \textbf{International Rank 20} in \textbf{IMO} Level 1 conducted by Science Olympiad Foundation (SOF)\rhsmall{2017}
+\end{itemize}
+\section{Scholarships and Recognitions}
+\begin{itemize}
+	\item Recipient of the National Talent Search \textbf{(NTS)} Scholarship given by NCERT to 1000 students of country\rhsmall{2017}
+	\item Awarded Academic Excellence Scholarship \textbf{(AES)} by SOF given to \textbf{one  student per class per state}\rhsmall{2017}
+	\item Recipient of the Maharashtra Talent Search \textbf{(MTS)} scholarship given by Centre for Talent Search and \\Excellence N. Wadia College, Pune  with \textbf{State Rank 11, 10, 16} respectively\rhsmall{2015-17}
+	\item Recipient of State Scholarship by Maharashtra State Council of Examination with \textbf{State Rank 5}\rhsmall{2014}
+\end{itemize}
+%\section{Work Experience}
+\section{Key Projects}
+\head{Distributed Deep Learning}\rhsmall{Summer 2020}\\
+\lhs{Institute Technical Summer Project (ITSP)}\rhse{Institute Technical Council, IIT Bombay}
+\begin{itemize}
+	\item Developed a \textbf{Hierarchically Distributed Deep CNN} to parallelise workload across nodes in the system
+	\item Utilised the model to implement better training on {Super-High-Resolution Datasets} via \textbf{spatial segmentation} of sample
+	and observed increases in \textbf{training speed} and decrease in \textbf{memory utilisation} per node
+	\item Compared the performance of \textbf{VGG16,  ResNet}, and \textbf{DenseNet} when used as the underlying neural network%LeNet%state-of-the-art nets such as 	
+	\item Verified the approach by using \textbf{Retinal OCT} and analysing loss of information due to spatial-segmentation%\textbf{CINIC-10} Datasets on Kaggle %with accuracy more than 70\%
+\end{itemize}
+\head{Arithmetic Logic Unit}\rhsmall{Autumn 2020}\\
+\lhs{Guide: Prof. Virendra Singh}\rhse{Course Project}
+\begin{itemize}
+	\item Designed a signed 16-bit ALU using \textbf{structural VHDL} which computes addition, subtraction, NAND \& XOR
+	\item Performed addition using 16-bit \textbf{Kogge–Stone fast adder} that returns output in 17-bit 2's complement form%for high performance%signed
+	\item Simulated the circuit using \textbf{Quartus} by handpicking test vectors covering all edge cases for each operation%by creating carefully selecting testcases
+\end{itemize}
+\head{Nonlinear Dynamics}\rhsmall{Summer 2020}\\
+\lhs{Summer of Science (SoS)}\rhse{Maths and Physics Club, IIT Bombay}
+\begin{itemize}
+	\item Analysed Continuous and Discrete Dynamical Systems, \textbf{Stochastic Systems} and Chaos \& Fractals
+	\item Explored its application with mathematical models in Physics, Biology, Chemistry and Engineering
+	\item Simulated mathematical models using \textbf{MATLAB} (dfield and pplane) and \textbf{Python} ({SciPy, Pynamical}) package
+\end{itemize}
+\head{DC Power Supply}\rhsmall{Autumn 2019}\\
+\lhs{Guide: Prof. Joseph John}\rhse{Course Project}
+%\begin{description}\CFont
+%	\item \textbf{Introduction to Electrical Engineering Practice} \%small | \textsl{Course Projects: EE113} {\footnotesize\hfill\%textsl{(Autumn 2019)}}%
+%	\item \small\textsl{Guide: Prof. BG Fernandes, Prof. Joseph J%ohn, %Prof. Debraj Chakraborty} 
+%\end{description}
+\begin{itemize}
+	\item Created regulated voltage supplier of 5V, 12V and --12V using \textbf{IC 7805}, \textbf{Zener Diodes} and electrical elements
+	\item Used transformer along with full-wave bridge rectifier in conjunction with a capacitive filter to get rectified wave%input %step-down
+	\item Designed a suitable circuit and realised complete setup on a PCB and Prototype Box for use in future labs
+\end{itemize}
+%\head{Automatic LED Lamp}\rhsmall{Autumn 2019}\\
+%\lhs{Guide: Prof. BG Fernandes}\rhse{Course Project}
+%\begin{itemize}
+%	\item Used \textbf{Schmitt Trigger} Circuit along with \textbf{LDR} in conjunction with a relay to make an automatic lamp
+%	\item Interfaced the Relay circuit with an LED which would turn on in dark and stay off in light
+%	%\item Used \textbf{LDR} and LED with Op-amp Schmitt Trigger Circuit to make an automatic lamp that glows in the dark
+%\end{itemize}
+\head{Digital Counter and Object Detector}\rhsmall{Autumn 2019}\\
+\lhs{Guide: Prof. Joseph John}\rhse{Course Project}
+\begin{itemize}
+	\item Interfaced LED-IR detector pair to 7490, 7447A and LT-542 7-segment display for \textbf{object sensing} and counter
+\end{itemize}
+\head{Remote Control Plane}\rhsmall{Autumn 2019}\\
+\lhs{RC Plane Competition}\rhse{Aeromodelling Club, IIT Bombay}
+\begin{itemize}
+	\item Designed and constructed an RC trainer plane with a proper estimation of wing, body and tail dimensions
+	\item Integrated \textbf{BLDC rotors, RF receivers} and \textbf{Servo Motors} to achieve controlled flight
+\end{itemize}
+\head{Remote Control Obstacle Manoeuvring Bot}\rhsmall{Autumn 2019}\\
+\lhs{XLR8}\rhse{Electronics and Robotics Club, IIT Bombay}
+\begin{itemize}
+	\item Made a \textbf{Bluetooth controlled bot}, using AT-tiny 2313 microcontroller and L293D motor driver 
+	\item Successfully steered the bot along an obstacle-ridden path using the Bluetooth module HC-05
+\end{itemize}
+\clearpage
+\section{Positions of Responsibility}
+\head{Trainee | IIT Bombay Racing}\rhsmall{Spring 2020}\\
+%\begin{description}\CFont
+%	\item [IIT Bombay Racing] | Electrical Trainee \small{\footnotesize\hfill\textsl{(Spring 2020)}}
+%\end{description}
+\lhs{Guide: Prof. Amber Shrivastava}\rhs{IIT Bombay}\\% | Dept. Of Mechanical Engineering, IIT Bombay}
+\lhsmall{A cross-functional team of students which designs, fabricates and assembles an Electric Race Car for Formula Student UK}\\% an international studnets race car} 
+\lhsmall{First Indian team to win the Engineering Design event in the history of FSUK (4\textsuperscript{th} overall out of 73 teams)}
+\begin{itemize}
+	\item Explored the \textbf{LV Safety} subsystem, the \textbf{Shutdown Sequence} of the car and its elements
+	\item Investigated the \textbf{Electronic Control Unit} (ECU) subsystem, working with \textbf{RPM} and \textbf{position sensors} and realised the working of the steering, acceleration pedal and the brake sensors with \textbf{Arduino IDE} 
+	\item Acquired the knowledge of \textbf{Controller Area Network} (CAN) and \textbf{Data Acquisition} (DAQ) systems and their implementation, wrote code for wireless communication using \textbf{LPC1768 Mbed} microcontroller and XBee
+\end{itemize}
+\head{Teaching Assistant | Computer Programming and Utilization}\rhsmall{Ongoing}\\
+\lhs{Guide: Bhaskaran Raman}\rhse{Computer Science and Engineering IIT Bombay}
+\begin{itemize}
+	\item Academically guiding 13 students, clearing their doubts through personal interaction
+	\item Created a webpage containing practice problems and relevant resources to enhance understanding of course
+\end{itemize}
+\head{Editor | Department Newsletter Team}\rhsmall{Ongoing}\\
+\lhs{\small{Background Hum: Team of 20 enthusiastic students}}\rhse{Electrical Engineering Student Association, IIT Bombay}
+\begin{itemize}
+	\item Ideated and working on an overview of exciting labs in the department
+	\item Preparing content recommendations of scientific and engineering marvels to inspire curiosity among readers
+\end{itemize}
+\section{Bootcamps and Workshops}
+\head{Tinkering Bootcamp}\rhsmall{Summer 2020}\\
+\lhs{Learner's Space (LS)}\rhse{Tinkerers' Laboratory, IIT Bombay}
+\begin{description}
+	\item \textbf{\hspace{0em} Self Irrigation System}
+\end{description}
+\begin{itemize}[leftmargin=1.8em]
+	\item Developed a system using Arduino IDE, which toggles according to readings from a \textbf{DHT1} humidity sensor
+	\item Manual \textbf{control} and \textbf{data monitoring} through \textbf{Blynk App} by projecting real-time data to Blynk servers 
+\end{itemize}
+\begin{description}
+	\item \textbf{\hspace{0em} Human Detection Alarm} 
+\end{description}
+\begin{itemize}[leftmargin=1.8em]
+	\item Made human detection system using a Passive Infrared \textbf{(PIR)} sensor which uses a buzzer module for alarm %gives input to buzzer module
+\end{itemize}
+\begin{description}
+	\item \textbf{\hspace{0em} Corona Cases Tracker} 
+\end{description}
+\begin{itemize}[leftmargin=1.8em]
+	\item \textbf{Automated} daily fetching of count of corona cases in India from a website using \textbf{ESP32} and \textbf{ThingHTTP}
+\end{itemize}
+\begin{description}
+	\item \textbf{\hspace{0em} Harry Potter's Invisibility Cloak}
+\end{description}
+\begin{itemize}[leftmargin=1.8em]
+	\item Live \textbf{removal of foreground} of range of colours from a webcam using \textbf{OpenCV} to induce transparency
+\end{itemize}
+\head{Scientific Computation and Mathematical Modelling in Python}\rhsmall{Summer 2020}\\
+\lhs{Learner's Space (LS)}\rhse{Maths and Physics Club, IIT Bombay}
+\begin{itemize}
+	\item Simulated mathematical models for \textbf{heat transfer}, \textbf{economic model}, \textbf{predator-prey} and \textbf{epidemiology}
+	\item Implemented algorithms like \textbf{PageRank Algorithm}, Euler's Method and \textbf{Runge-Kutta Algorithm}
+	\item Animated cellular automaton such as \textbf{Game of Life} and \textbf{Langton's Ant} using \textbf{FuncAnimation} of Matplotlib
+\end{itemize}
+\textbf{Data Analytics Bootcamp} by Analytics Club \& \textbf{Quantum Computing Workshop} by MnP Club
+%\head{Data Analytics Bootcamp}\rhsmall{Summer 2020}\\
+%\lhs{Learner's Space (LS)}\rhse{Analytics Club, IIT Bombay}
+%\begin{itemize}
+%	\item Utilised \textbf{Pandas}  and \textbf{seaborn} for loading, cleaning, manipulating, analysing and visualising datasets
+%	\item Investigated \textbf{scikit-learn} for machine learning algorithms to build models and make predictions%smart
+%	\item Explored \textbf{Model Development} and \textbf{Model Evaluation} using numerous statistical techniques
+%\end{itemize}
+%\head{Quantum Computing}\rhsmall{Summer 2020}\\
+%\lhs{10-day Workshop}\rhse{Maths and Physics Club, IIT Bombay}
+%\begin{itemize}
+%	\item Hands-on experience using \textbf{Qiskit}, designing circuits and implementing diverse operations using quantum gates%different
+%	\item Implemented \textbf{Deutsch–Jozsa} \& Grover's algorithm, \textbf{BB84} Protocol, and \textbf{Quantum Fourier Transform}
+%\end{itemize}
+\section{Key Courses Undertaken}
+\setlength\tabcolsep{0.3em}
+\vspace{-0.3em}
+\hspace{-5pt}{
+\begin{tabular}{p{3.2cm} p{13.8cm}}
+%{\linespread{1.8}
+\textbf{Electrical} & \textbf{Signal Processing}, \textbf{Digital Systems}, \textbf{Microprocessors}\footnotemark[2], \textbf{Control Systems}\footnotemark[2], \newline Power Engineering\footnotemark[2], Analog Circuits, Electronic Devices and Circuits\footnotemark[2]\\%, Electronic Devices\footnotemark[2], Introduction to Electrical Engineering Practice \\%+Lab\footnotemark[2]
+\textbf{Computer Science}& \textbf{Logic for Computer Science}, \textbf{Introduction to Machine Learning}\footnotemark[2]\newline Computer Programming and Utilization\\
+\textbf{Mathematics}& Calculus, Linear Algebra, Differential Equations, Complex Analysis, \newline Probability and Random Processes, \textbf{Matrix Computations}\footnotemark[2]\\
+%\textbf{Physics}& Quantum Physics and Application, Basics of Electricity and Magnetism                 \\
+\textbf{Coursera}& \textbf{Deep Learning Specialization} (deeplearning.ai), Algorithmic Toolbox\footnotemark[2] (UC San Diego)% by deeplearning.ai 
+\end{tabular}
+\begin{description}
+\item {\hfill\footnotesize\textsuperscript\textdagger\textsl{to be completed by April 2021}}
+\end{description}
+\vspace{-1.4em}
+\section{Technical Skills}
+\vspace{-1.4em}
+\begin{table}[h]
+\hspace{-5pt}
+\begin{tabular}{p{1.65in}p{5in}}
+\textbf{Languages}& C++, Python, Julia, HTML, CSS, \LaTeX, SQL\\
+\textbf{Frameworks \& Libraries}& NumPy, SciPy, SymPy, pandas, seaborn, scikit-learn, OpenCV, PyTesseract,\newline TensorFlow, Keras, PyTorch,Selenium, Beautiful Soup, PyAutoGUI, Jekyll, Qiskit\\%Matplotlib
+\textbf{Softwares}& Git, MATLAB, Simulink, EAGLE, LTspice, Quartus, AutoCAD, SOLIDWORKS\\% Adobe Illustrator
+\textbf{Hardwares}& Arduino, ESP32, Raspberry Pi 4, Krypton, VHDL\\
+\end{tabular}
+\end{table}
+\setlength\tabcolsep{0.05em}
+\vspace{-1.1em}
+\section{Extracurriculars}
+\vspace{-1.4em}
+\begin{table}[H]
+\begin{tabular}{p{0.7in}p{6.05in}}
+\vspace{-0.5em}
+\small\textbf{NCC}\newline{\scriptsize\textsl{(2019-2020)}} 	& 
+\vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\begin{itemize}
+	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay%{\footnotesize\hfill\textsl{(2019--20)}}
+	\item Attended ten-day-long NCC \textbf{Annual Training Camp} (ATC) held during Nov-Dec 2019
+	\item Part of \textbf{Republic Day Parade Contingent} held on 26\textsuperscript{th} January 2020 at IIT Bombay Gymkhana
+	\item Represented IIT Bombay in \textbf{Inter-College Cricket} Competition at (ATC) organised by NCC
+	\item Participated in \textbf{Group Act Competition}, Cultural GC organised by NCC IIT Bombay	
+\end{itemize}\\[-1em]\hline
+\vspace{-0.5em}
+\small\textbf{Social\newline Volunteer}\newline{\scriptsize\textsl{(2019-2020)}} & \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\begin{itemize}
+	\item Volunteered for Career Counselling Campaign and A Session on Climate Change for 12,000+ underprivileged students from 8\textsuperscript{th} to 12\textsuperscript{th} conducted by \textbf{Abhyuday} in association with \textbf{NCC}%across 80+ schools in Mumbai
+	\item \textbf{Mentored} students appearing for JEE during \textbf{COVID-19} crisis as part of \textbf{CovEd Education}% initiative%{\footnotesize\hfill\textsl{(2020)}}
+\end{itemize}\\[-1em]\hline
+\vspace{-0.5em}
+\small\textbf{Culturals}\newline{\scriptsize\textsl{(2019-2020)}}	& \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\begin{itemize}
+	\item Studied \textbf{Beginner Music Theory} as a part of Summer School of Cult conducted by ICC
+\end{itemize}
+\end{tabular}
+\end{table}
+\end{document}
