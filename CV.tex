@@ -18,7 +18,9 @@
 % character encoding
 \usepackage{microtype}
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
+\usepackage{lmodern}
 %\usepackage{CJKutf8}                              % if you need to use CJK to typeset your resume in Chinese, Japanese or Korean
+\usepackage{amsmath,sansmath,bm}
 \usepackage{float}
 \renewcommand*{\thefootnote}{\fnsymbol{footnote}}
 \usepackage{array}
@@ -41,8 +43,8 @@
 %\setlength{\makecvtitlenamewidth}{10cm}           % for the 'classic' style, if you want to force the width allocated to your name and avoid line breaks. be careful though, the length is normally calculated to avoid any overlap with your personal info; use this at your own typographical risks...
 \definecolor{DarkBlue}{RGB}{2,7,128}
 \usepackage{titlesec}
-\titleformat{\section}{\vspace{-1em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.4em}]
-\titleformat{\subsection}{\vspace{-1em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.4em}]
+\titleformat{\section}{\vspace{-1em}\bfseries\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.4em}]
+\titleformat{\subsection}{\vspace{-1em}\bfseries\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.4em}]
 % \titleformat{\section}{\vspace{-1.4em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
 \usepackage{import}
 \usepackage{enumitem}
@@ -60,7 +62,7 @@
 % personal data
 \name{Param Rathour}{}
 \address{Fifth Year Electrical Undergraduate, IIT Bombay}
-\homepage{paramrathour.github.io/}
+\homepage{paramrathour.github.io}
 \email{paramrathour@iitb.ac.in}{}
 \social[github][github.com/paramrathour]{paramrathour}
 % \social[linkedin][www.linkedin.com/in/param3435/]{param3435}
@@ -85,11 +87,12 @@
 % \thispagestyle{firstpage}
 %\pagenumbering{gobble}
 \makecvtitle
+\sansmath
 \vspace*{-3em}
 \section{Education}
 \vspace*{0.4em}
 \headeducation{Indian Institute of Technology Bombay, Mumbai}\rhsmalle{Jul 2019 - Present}\\
-{Dual Degree (B.Tech + M.Tech) in Electrical Engineering (Specialization: Control and Computing)}\rhsmalle{CPI: 8.87/10}\\
+{Dual Degree (B.Tech + M.Tech) in Electrical Engineering (Specialization: Control and Computing)}\rhsmalle{CPI: 9.03/10}\\
 {Completed a {Minor} in {Computer Science \& Engineering}}\rhsmalle{Minor CPI: 8.25/10}\\%, and {Honours} in {Electrical Engineering}}% and \textbf{Data Science}
 \headeducation{Sant Tukaram National Model School, Latur}\rhsmalle{Jul 2017 - Apr 2019}\\
 {Intermediate (Central Board of Secondary Education)}\rhsmalle{Percentage: 96.6\%}\\
@@ -98,20 +101,21 @@
 \section{Scholastic Achievements}
 \vspace{0.2em}
 \begin{itemize}
-	\item Achieved a perfect \textbf{10 SPI} (Semester Performance Index) with 36 credits during the 8\textsuperscript{th} semester at IIT Bombay\rhsmall{2023}
+	\item Achieved a perfect \textbf{10 SPI} during the 8\textsuperscript{th} and 9\textsuperscript{th} semester at IIT Bombay with 36 and 48 credits respectively\rhsmall{2023}%(Semester Performance Index)
+	\item Awarded an \textbf{AP} grade for exceptional performance in the Advanced Computer Architecture course at IIT Bombay\rhsmall{2023}
 	\item Secured \textbf{All India Rank 926} in Joint Entrance Examination (\textbf{JEE}) \textbf{Advanced} among 161 thousand candidates\rhsmall{2019}
 	\item Secured \textbf{99.9\%} percentile in Joint Entrance Examination (\textbf{JEE}) \textbf{Main} among 1.1 million candidates\rhsmall{2019}
 	\item Scored \textbf{418} marks out of 450 in Birla Institute of Science and Technology Admission Test (\textbf{BITSAT})\rhsmall{2019}
 	\item Secured \textbf{99.92\%} percentile in \textbf{MHT-CET} among 270 thousand candidates conducted by the Maharashtra Govt.\rhsmall{2019} 
 	% \item Statewise top 1\% in the National Standard Examination in Astronomy \textbf{(NSEA)} and Chemistry \textbf{(NSEC)}\rhsmall{2019}
-	%\item Secured \textbf{International Rank 20} in \textbf{IMO} Level 1 conducted by Science Olympiad Foundation (SOF)\rhsmall{2017}
+	% \item Secured \textbf{International Rank 20} in \textbf{IMO} Level 1 conducted by Science Olympiad Foundation (SOF)\rhsmall{2017}
 \end{itemize}
 \section{Scholarships and Recognitions}
 \vspace{0.2em}
 \begin{itemize}
 	\item Recipient of the National Talent Search (\textbf{NTS}) Scholarship received by the top 1000 students in the country\rhsmall{2017}
 	\item Awarded Academic Excellence Scholarship (\textbf{AES}) by SOF given to a \textbf{single  student} per class in each state\rhsmall{2017}%Science Olympiad Foundation
-	\item Recipient of the Maharashtra Talent Search (\textbf{MTS}) Scholarship  with \textbf{State Rank 11, 10,} and \textbf{16} respectively\rhsmall{2015-17}%given by Centre for Talent Search and Excellence \\N. Wadia College, Pune
+	\item Recipient of the Maharashtra Talent Search (\textbf{MTS}) Scholarship  with \textbf{State Rank 11, 10,} and \textbf{16}\ \rhsmall{2015, 2016, 2017}%given by Centre for Talent Search and Excellence \\N. Wadia College, Pune
 \end{itemize}
 \section{Work Experience}
 \head{NVIDIA $\mid$ GPU Subsystem}\\
@@ -129,8 +133,8 @@
 {\small\textbf{Junior Design Engineer} $\mid$ LV Safety Subsystem}\rhsmalle{Sep 2020 - May 2021}
 \begin{itemize}
 	% \item The subsytem controlled most of the Shutdown circuitry and detection of electrical faults in a car like \textbf{IMD} and \textbf{ECU} errors
-	%\item Working on reducing board sizes of ciruits and improving testability and reliability of circuits
 	\item Simulated the LV Safety board on \textbf{LTSpice} and verified the working of RTDS, brake light, and error blocks of the subsystem
+	% \item Worked on reducing the board sizes of ciruits and improving testability and reliability of circuits
 	\item Explored Electromagnetic Interference (\textbf{EMI}) reduction techniques to be incorporated into PCB designs of the subsystem
 	\item \textbf{Mentored} 3 trainees in understanding the subsystem through the FS rulebook, circuit design tasks, and LTspice simulations
 	% \item Doing integrated testing of the electrical components in the car
@@ -142,10 +146,17 @@
 	\item Acquired knowledge of {Controller Area Network} (\textbf{CAN}) protocol \& {Data Acquisition} (\textbf{DAQ}) system and their implementation, programmed code for wireless communication using \textbf{LPC1768 Mbed} microcontroller and \textbf{XBee} module
 \end{itemize}
 \section{Research Projects}
-\head{Computational Commutative Algebra and Geometry}\rhsmall{July 2022 - Nov 2022}\\ 
+\head{Data-Driven Control using Informativity in Presence of Adversarial Attacks}\rhsmall{Jul 2023 - Present}\\ 
+\lhsmall{Guide: Prof. Debasattam Pal}\rhsmalle{Dual Degree Project, IIT Bombay}
+\begin{itemize}
+	\item Explored the \textbf{Behavioral Approach} in control to develop suitable mathematical framework for analysing dynamical systems
+	\item Investigated into inferring the dissipativity properties of linear systems from measured data using the \textbf{Informativity} framework
+	\item Developing a threat model for an \textbf{adversarial attacker} and working on verifying system properties using corrupted data
+\end{itemize}
+\head{Computational Commutative Algebra and Geometry}\rhsmall{Jul 2022 - Nov 2022}\\ 
 \lhsmall{Guide: Prof. Debasattam Pal}\rhsmalle{Supervised Research Exposition, IIT Bombay}
 \begin{itemize}
-	\item Investigated into the theory and computation of \textbf{Gr\"obner Bases} for Ideals in a polynomial ring $\mathsf{k[x_1,\ldots,x_n]}$ over a field $\mathsf{F}$
+	\item Investigated into the theory and computation of \textbf{Gr\"obner Bases} for Ideals in a polynomial ring ${k[x_1,\ldots,x_n]}$ over a field ${F}$
 	\item Explored the algebraic and geometric applications of Gr\"obner Bases in solving Ideals, Varieties and Nullstellensatz problems
 	\item Implemented fast solvers for system of linear \& polynomial equations and Sudoku in \textbf{SageMath} using Elimination Theory
 \end{itemize}
@@ -177,20 +188,33 @@
 	\item Studied \textbf{concentration of measure} phenomenon for the analysis of randomized algorithms and the scenario approach
 	\item Analysed various randomized algorithms like \textbf{MCMC, Propp-Wilson, simulated annealing} using Finite Markov Chains
 \end{itemize}
+\head{Paper Reviews}\rhsmalle{IIT Bombay}
+\begin{itemize}
+	\item Overview of Millimeter Wave Communications for 5\textsuperscript{th}-Generation Wireless Networks\rhsmall{EE301 $\mid$ Electromagnetic Waves}% -- With a focus on Propagation Models
+	\item Challenges for quantum-assisted machine learning in near-term quantum computers\rhsmall{EE350 $\mid$ Technical Communication}%Opportunities and 
+\end{itemize}
 \section{Key Projects}
 \head{Intelligent and Learning Agents}\rhsmall{Jul 2021 - Nov 2021}\\
 \lhsmall{Guide: Prof. Shivaram Kalyanakrishnan}\rhsmalle{CS747 $\mid$ Foundations of Intelligent and Learning Agents}
 \begin{itemize}
-	\item Implemented and compared $\mathsf{\varepsilon}$-greedy, \textbf{UCB}, KL-UCB and Thompson Sampling for a stochastic multi-armed bandit framework
+	\item Implemented and compared ${\varepsilon}$-greedy, \textbf{UCB}, KL-UCB and Thompson Sampling for a stochastic multi-armed bandit framework
 	\item Performed \textbf{MDP Planning} using Value Iteration, Howard's Policy Iteration and Linear Programming with \textbf{PuLP} in Python
 	\item Propelled up a weak car placed at the bottom of a sinusoidal valley using \textbf{Sarsa} with \textbf{Tile Coding} in the \textbf{OpenAI} Gym %environment
 \end{itemize}
-\head{Autonomous Robotic Systems and Control}\rhsmall{Jan 2023 - May 2023}\\
-\lhsmall{Guide: Prof. Debasattam Pal}\rhsmalle{EE615 $\mid$ Control and Computing Lab}
+\head{Efficient Cache Replacement Policy using Reinforcement Learning}\rhsmall{Sep 2023 - Nov 2023}\\
+\lhsmall{Guide: Prof. Biswabandan Panda}\rhsmalle{CS683 $\mid$ Advanced Computer Architecture}
 \begin{itemize}
-	\item Realised \textbf{path planning} and \textbf{obstacle avoidance} of autonomous mobile robots in \textbf{MATLAB} using Vector Field Histogram
-	\item Executed \textbf{sensor fusion} using complementary \& \textbf{Kalman filter} for estimating the orientation of inertial measurement units
-	\item Implemented stabilisation of Rotary Inverted Pendulum using Swing-Up Control and \textbf{Linear-Quadratic Regulator} Control%Furuta pendulum%stabilization
+	\item Implemented Reinforcement Learned Replacement (RLR), an eviction policy based on {age, hit} and {type} priority of cache-lines%\textbf{cost-effective} 
+	\item Designed Micro-Armed Bandit-based (MAB) replacement, utilising \textbf{temporal homogeneity} in the action space of policies%LRU, SHiP, SRRIP, DRRIP
+	\item Evaluated both policies in \textbf{ChampSim} using 49 memory intensive traces from \textbf{SPEC} 2017 benchmarks and achieved an overall IPC speedup over LRU of \textbf{5\% }for RLR and \textbf{1.2\%} for MAB with LRU, SHiP, SRRIP, DRRIP in its action space
+\end{itemize}
+\head{Visual Learning and Recognition of 3-D Objects from Appearance}\rhsmall{Oct 2023 - Nov 2023}\\
+\lhsmall{Guide: Prof. Ajit Rajwade}\rhsmalle{CS663 $\mid$ Fundamentals of Digital Image Processing}
+\begin{itemize}
+	\item Implemented a high-performance training and testing pipeline for object detection and pose estimation using \textbf{Python}% using the COIL-100 dataset
+	\item Utilised Principal Component Analysis \textbf{(PCA)} and cubic interpolation to construct parametric manifolds for each object
+	\item Conducted a comprehensive study across objects with varying complexities to determine \textbf{optimal} hyperparameter values
+	\item Achieved an object recognition accuracy of \textbf{99.172\%} and a mean pose error of \textbf{6.872}$^{\bm\circ}$ by using the \textbf{COIL-100} dataset
 \end{itemize}
 \head{Distributed Deep Learning}\rhsmall{Mar 2020 - Jul 2020}\\
 \lhsmall{Institute Technical Summer Project (ITSP)}\rhsmalle{Institute Technical Council, IIT Bombay}
@@ -198,38 +222,15 @@
 	% \item Developed a \textbf{Hierarchically-Distributed} Deep CNN in order to parallelise workload across nodes in the learning model
 	\item Developed a {Hierarchically-Distributed Deep CNN} learning model for training \textbf{super-high-resolution datasets} via {spatial segmentation} of each sample and observed an increase in \textbf{training speed} and a decrease in \textbf{memory utilisation} per node% in the hierarchy network
 	\item Compared the performance of state-of-the-art {VGG16, ResNet}, and {AlexNet} when used as the underlying Neural Networks%LeNet,DenseNet%state-of-the-art nets such as 	
-	\item Verified the approach by using Kaggle's \textbf{Retinal OCT} dataset and analysed loss of information due to spatial segmentation%\textbf{CINIC-10} Datasets on Kaggle %with accuracy more than 70\%
+	\item Verified the approach by using \textbf{Retinal OCT} and \textbf{CINIC-10} datasets on Kaggle attaining more than \textbf{70\%} accuracy for each% and analysed loss of information due to spatial segmentation%\textbf{CINIC-10} Datasets on Kaggle %with accuracy more than 70\%
 \end{itemize}
-\head{Temperature Controller Using Heating Element and PWM Control}\rhsmall{Jan 2022 - May 2022}\\
-\lhsmall{Guide: Prof. Kushal R. Tuckley}\rhsmalle{EE344 $\mid$ Electronic Design Lab}
+\head{Autonomous Robotic Systems and Control}\rhsmall{Jan 2023 - May 2023}\\
+\lhsmall{Guide: Prof. Debasattam Pal}\rhsmalle{EE615 $\mid$ Control and Computing Lab}
 \begin{itemize}
-	\item Utilised Simscape physical modelling to design, simulate and test a low-cost, easy-to-maintain and reliable food oven with the ability to maintain any temperature within the range of \textbf{90-260°C} with\textbf{ 1-2\%} accuracy and achieve it within \textbf{2 minutes}%easy-to-maintain and
-% 	\item The system will maintain any temperature within the range 200-1000°C with 1-2\% accuracy \& achieve it within 30 minutes
-	\item Ideated a control mechanism accounting for the temperature differences, oscillations, and overheating of the furnace
-	% \item Identified the optimal heating element \textbf{Kanthal D} considering calculated using heat equations%using \textbf{SG3525A-D}
-	\item Selected suitable components for the driver circuitry, temperature sensing and interfacing by estimating thermal parameters
+	\item Realised \textbf{path planning} and \textbf{obstacle avoidance} of autonomous mobile robots in \textbf{MATLAB} using Vector Field Histogram
+	\item Executed \textbf{sensor fusion} using complementary and \textbf{Kalman filter} to estimate the orientation of inertial measurement units
+	\item Implemented stabilisation of Rotary Inverted Pendulum using Swing-Up Control and \textbf{Linear-Quadratic Regulator} Control%Furuta pendulum%stabilization
 \end{itemize}
-% \clearpage
-\head{Two-Way Fetch Superscalar Processor}\rhsmall{Jan 2022 - May 2022}\\
-\lhsmall{Guide: Prof. Virendra Singh}\rhsmalle{EE739 $\mid$ Processor Design}
-\begin{itemize}
-	\item Designed a \textbf{six-stage} 16-bit superscalar processor capable of handling \textbf{19} arithmetic, logical, and branching instructions
-	\item Employed two-way instruction fetch, decode, dispatch, execute and write-back stages with \textbf{branch prediction} techniques
-	\item Designed a \textbf{16-bit} \textbf{signed ALU} implementing addition using \textbf{Kogge-Stone} fast adder and verified it using Intel Quartus %Prime%high performing
-\end{itemize}
-\head{Tennis Scoreboard Simulator}\rhsmall{Jan 2021 - May 2021}\\
-\lhsmall{Guide: Prof. V Raj Babu}\rhsmalle{EE337 $\mid$ Microprocessors Laboratory}
-\begin{itemize}
-	\item Simulated a \textbf{robust} tennis scoreboard using \textbf{Embedded C} in the \textbf{best-of-three tiebreak} set format on the Pt-51 board
-	\item Displayed usage directions and the current score, Game, Set, Match Point for each player using an {LCD HD44780U} module
-	\item Employed \textbf{UART} Module and \textbf{RealTerm} software for interfacing between a keyboard and \textbf{Atmel AT89C51} micro-controller
-\end{itemize}
-% \head{Mini-8085 Microprocessor}\rhsmall{Spring 2022}\\
-% \lhsmall{Guide: Prof. Virendra Singh}\rhsmalle{Course Project}
-% \begin{itemize}
-% 	\item Designed a scaled down 8085 micro processor capable of handling \textbf{18} arithmetic, logical, branching instructions
-% 	\item Devised level 2 hardware flowcharts, datapath organization, control words \& decoding logic for provided ISA
-% \end{itemize}
 \head{Dining Philosophers: A Synchronisation Problem}\rhsmall{Jan 2022 - May 2022}\\
 \lhsmall{Guide: Prof. Mythili Vutukuru}\rhsmalle{CS347 $\mid$ Operating Systems}
 \begin{itemize}
@@ -242,6 +243,35 @@
 	\item Analysed Linear Complexity (LC) profiles of the bit multi-sequences with \textbf{3-SAT}, Quadratic Residue and Exponential Map
 	\item Implemented reduced-\textbf{Moustique}, a self-synchronising stream cipher, achieving \textbf{almost perfect LC} profiles in \textbf{SageMath}
 \end{itemize}
+\head{Tennis Scoreboard Simulator}\rhsmall{Jan 2021 - May 2021}\\
+\lhsmall{Guide: Prof. V Raj Babu}\rhsmalle{EE337 $\mid$ Microprocessors Laboratory}
+\begin{itemize}
+	\item Simulated a \textbf{robust} tennis scoreboard using \textbf{Embedded C} in the \textbf{best-of-three tiebreak} set format on the Pt-51 board
+	\item Displayed usage directions and the current score, Game, Set, Match Point for each player using an {LCD HD44780U} module
+	\item Employed \textbf{UART} Module and \textbf{RealTerm} software for interfacing between a keyboard and \textbf{Atmel AT89C51} micro-controller
+\end{itemize}
+\head{Temperature Controller Using Heating Element and PWM Control}\rhsmall{Jan 2022 - May 2022}\\
+\lhsmall{Guide: Prof. Kushal R. Tuckley}\rhsmalle{EE344 $\mid$ Electronic Design Lab}
+\begin{itemize}
+	\item Utilised Simscape physical modelling to design, simulate and test a low-cost, easy-to-maintain and reliable food oven with the ability to maintain any temperature within the range of \textbf{90-260°C} with\textbf{ 1-2\%} accuracy and achieve it within \textbf{2 minutes}%easy-to-maintain and
+% 	\item The system will maintain any temperature within the range 200-1000°C with 1-2\% accuracy \& achieve it within 30 minutes
+	\item Ideated a control mechanism accounting for the temperature differences, oscillations, and overheating of the furnace
+	% \item Identified the optimal heating element \textbf{Kanthal D} considering calculated using heat equations%using \textbf{SG3525A-D}
+	\item Selected suitable components for the driver circuitry, temperature sensing and interfacing by estimating thermal parameters
+\end{itemize}
+\head{Two-Way Fetch Superscalar Processor}\rhsmall{Jan 2022 - May 2022}\\
+\lhsmall{Guide: Prof. Virendra Singh}\rhsmalle{EE739 $\mid$ Processor Design}
+\begin{itemize}
+	\item Designed a \textbf{six-stage} 16-bit superscalar processor capable of handling \textbf{19} arithmetic, logical, and branching instructions
+	\item Employed two-way instruction fetch, decode, dispatch, execute and write-back stages with \textbf{branch prediction} techniques
+	\item Designed a \textbf{16-bit} \textbf{signed ALU} implementing addition using \textbf{Kogge-Stone} fast adder and verified it using Intel Quartus %Prime%high performing
+\end{itemize}
+% \head{Mini-8085 Microprocessor}\rhsmall{Spring 2022}\\
+% \lhsmall{Guide: Prof. Virendra Singh}\rhsmalle{Course Project}
+% \begin{itemize}
+% 	\item Designed a scaled down 8085 micro processor capable of handling \textbf{18} arithmetic, logical, branching instructions
+% 	\item Devised level 2 hardware flowcharts, datapath organization, control words \& decoding logic for provided ISA
+% \end{itemize}
 % \head{Arithmetic Logic Unit}\rhsmall{Autumn 2020}\\
 % \lhsmall{Guide: Prof. Virendra Singh}\rhsmalle{Course Project}
 % \begin{itemize}
@@ -305,26 +335,26 @@
 	\item Steered the bluetooth-controlled bot along an obstacle-ridden path using  AT-tiny 2313 microcontroller,  L293D motor driver% and bluetooth module HC-05
 	% \item Successfully steered the bot along an obstacle-ridden path using the Bluetooth module HC-05
 \end{itemize}
-\clearpage
 \section{Miscellaneous Projects}
 \vspace{0.2em}
 \begin{description}
 	% \item[Sensor Fusion] -- Implemented Kalman \& Complementary Filter %and Algebraic Quaternion Algorithm
+	% \item[MDP Planning] -- Implemented using Value Iteration, Howard's Policy Iteration and Linear Programming in {Python}
 	% for estimating orientation using Inertial Measurement Units% (IMUs)
 	% \item[Mountain Car] -- Drove up a weak car on mountain using \textbf{Sarsa} with \textbf{Tile Coding} in \textbf{OpenAI Gym} environment% in $<100$ steps on average
 	% \item[Path Following] -- Implemented in \textbf{MATLAB} using Pure Pursuit Algorithm and Vector Field Histogram for obstacle avoidance
-	% \item[MDP Planning] -- Implemented using Value Iteration, Howard's Policy Iteration and Linear Programming in {Python}
+	\item[DC Power Supply] -- Realised a regulated voltage supply of 5V, 12V and --12V using \textbf{IC 7805}, \textbf{Zener Diodes} on \textbf{PCB}\ \rhsmalle{EE113}
+	\item[Music Synthesizer] -- Designed an FSM to play 7 Indian music notes in a particular order with \textbf{Behavioral Style VHDL}\ \rhsmalle{EE214}%seven major notes of the Indian classical music
+	\item[Keyboard Scanning] -- Implemented \textbf{Key Debouncing} using Finite State Machine (FSM) in 8051 and MIPS Assembly\ \rhsmalle{EE309}
 	% \item[Moustique Cipher] -- Generated \textbf{Pseudorandom Bit Sequences} with almost perfect \textbf{linear complexity profiles} in Sage %with a reduced size analog %analysed it's randomness using Linear Complexity profiles
-	\item[Music Synthesizer] -- Designed a FSM to play 7 notes of Indian music in a particular order with \textbf{Behavioral Style VHDL}%seven major notes of the Indian classical music
-	\item[Keyboard Scanning] -- Implemented \textbf{Key Debouncing} using Finite State Machine (FSM) in 8051 and MIPS Assembly
 	% \item[Dining Philosophers] -- Solved using both custom \textbf{semaphores} \& \textbf{condition variables} independently with \textbf{pthreads API} %to solve the synchronization problem
-	\item[Course TimeTabling] -- Developed an Integer Linear Program with \textbf{Pulp} to allocate rooms and slots to courses appropriately%in suitable room such that there are no slot clashes 
+	\item[Course TimeTabling] -- Developed an Integer Linear Program (ILP) with \textbf{Pulp} for rooms and slots allocation of courses\ \rhsmalle{CS218}%in suitable room such that there are no slot clashes 
 	% \item[Corona Cases Tracker] -- {Automated} daily fetching of count of corona cases in India from web using \textbf{ESP32} and \textbf{ThingHTTP}
-	\item[Automatic LED Lamp] -- Used \textbf{Schmitt Trigger} Circuit along with \textbf{LDR} in conjunction with a relay interfaced with an LED
+	\item[Automatic LED Lamp] -- Used \textbf{Schmitt Trigger} circuit and \textbf{LDR} in conjunction with a relay interfaced with an LED\ \rhsmalle{EE113}
 	% \item[Intruder Detection Alarm] -- Developed using a Passive Infrared \textbf{(PIR)} sensor which uses a buzzer module for alarm
 	% \item[Rotary Inverted Pendulum] -- Implemented in \textbf{MATLAB} using swing-up control and \textbf{LQR} balance control
 	% \item[Harry Potter's Invisibility Cloak] -- Induced transparency by \textbf{live removal of foreground} of a colour range using \textbf{OpenCV}
-	\item[Digital Counter for Object Counting] -- Interfaced LED-IR detector pair to 7490, 7447A and LT-542 7-segment display% for object sensing
+	\item[Digital Counter for Object Counting] -- Interfaced LED-IR detector pair to 7490, 7447A and a 7-segment display\ \rhsmalle{EE113}% for object sensing
 \end{description}
 % \clearpage
 \section{Bootcamps and Workshops}
@@ -347,6 +377,21 @@
 \begin{itemize}
 	\item Simulated live \textbf{removal of foreground} of range of colours from a webcam using \textbf{OpenCV} to create a transparency effect
 \end{itemize}
+% \textbf{Data Analytics Bootcamp} by Analytics Club \& \textbf{Quantum Computing Workshop} by MnP Club
+\head{Data Analytics Bootcamp}\rhsmall{Summer 2020}\\
+\lhsmall{Learner's Space (LS)}\rhsmalle{Analytics Club, IIT Bombay}
+\begin{itemize}
+	\item Utilised \textbf{Pandas}  and \textbf{seaborn} for loading, cleaning, manipulating, analysing, visualising datasets and model development
+	\item Investigated \textbf{scikit-learn} for machine learning algorithms and statistical techniques to make and evaluate predictions%smart
+	\item Explored the statistical techniques in Data Wrangling, Exploratory Data Analysis, {Model Development} and {Model Evaluation}
+\end{itemize}
+\head{Quantum Computing}\rhsmall{Summer 2020}\\
+\lhsmall{10-day Workshop}\rhsmalle{Maths and Physics Club, IIT Bombay}
+\begin{itemize}
+	\item Designed quantum circuits and implemented teleporation of information \& entangled pairs using qubits in \textbf{Qiskit} by IBM
+	\item Developed Hands-on experience with designing quantum circuits and implementing diverse operations using quantum gates
+	\item Implemented \textbf{Deutsch-Jozsa}, Grover's algorithm, {Quantum Fourier Transform} and \textbf{BB84} Protocol for secure communication
+\end{itemize}
 \head{Scientific Computation and Mathematical Modelling in Python}\rhsmall{Summer 2020}\\
 \lhsmall{Learner's Space (LS)}\rhsmalle{Maths and Physics Club, IIT Bombay}
 \begin{itemize}
@@ -354,21 +399,7 @@
 	% \item Implemented the \textbf{PageRank Algorithm}, Euler's Method and \textbf{Runge-Kutta Algorithm}
 	\item Animated cellular automaton such as \textbf{Game of Life} and \textbf{Langton's Ant} using \textbf{FuncAnimation} provided by Matplotlib
 \end{itemize}
-% \textbf{Data Analytics Bootcamp} by Analytics Club \& \textbf{Quantum Computing Workshop} by MnP Club
-\head{Data Analytics Bootcamp}\rhsmall{Summer 2020}\\
-\lhsmall{Learner's Space (LS)}\rhsmalle{Analytics Club, IIT Bombay}
-\begin{itemize}
-	\item Utilised \textbf{Pandas}  and \textbf{seaborn} for loading, cleaning, manipulating, analysing, visualising datasets and model development
-	\item Investigated \textbf{scikit-learn} for machine learning algorithms and statistical techniques to make and evaluate predictions%smart
-	% \item Explored \textbf{Model Development} and \textbf{Model Evaluation} using numerous statistical techniques
-\end{itemize}
-\head{Quantum Computing}\rhsmall{Summer 2020}\\
-\lhsmall{10-day Workshop}\rhsmalle{Maths and Physics Club, IIT Bombay}
-\begin{itemize}
-	\item Designed quantum circuits and implemented teleporation of information \& entangled pairs using qubits in \textbf{Qiskit} by IBM
-	% \item Hands-on experience , designing circuits and implementing diverse operations using quantum gates%different
-	\item Implemented \textbf{Deutsch-Jozsa}, Grover's algorithm, {Quantum Fourier Transform} and \textbf{BB84} Protocol for secure communication
-\end{itemize}
+\clearpage
 \section{Positions of Responsibility}
 \head{Teaching Assistant $\mid$ IIT Bombay}\\
 {\small\textbf{Computer Programming and Utilisation $\mid$ CS101}} \rhsmalle{Autumn 2020, Autumn 2021, Spring 2022, Autumn 2022}
@@ -377,9 +408,9 @@
 	\item Prepared and evaluated examinations \& lab problems and conducted Hindi help sessions for students facing language barriers
 	\item Brainstormed \textbf{60+ practice problems} for CS101, shared via a personal \textbf{webpage} with tips and resources to boost interest% and more resources% to enhance interest%understanding
 \end{itemize}
-{\small\textbf{Multivariable Control $\mid$ EE640}}\rhsmalle{Autumn 2023 (Present)}
+{\small\textbf{Multivariable Control $\mid$ EE640}}\rhsmalle{Autumn 2023}
 \begin{itemize}
-	\item Academically guiding \textbf{40+} students, clearing their doubts through tutorials and assisting the instructor in course logistics
+	\item Academically guided \textbf{40+} students, clearing their doubts through tutorials and assisting the instructor in course evaluation
 \end{itemize}
 \head{Mentor $\mid$ Summer of Science}\rhsmall{Summer 2021, Summer 2022, Summer 2023}\\
 \lhsmall{Topics: Linear Algebra, Data Structures and Algorithms, Cryptography, Reinforcement Learning}\rhsmalle{Maths and Physics Club, IIT Bombay}
@@ -408,31 +439,31 @@
 \hspace{-5pt}
 \begin{tabular}{p{1.15in}p{5.85in}}
 %{\linespread{1.8}
-\textbf{Electrical} & Advanced Computer Architechture\footnotemark[2], {Digital Systems}, {Signal Processing}, Information Theory and Coding\\% {Error Correcting Codes}, Cryptography, {Communication Systems}, Analog Circuits, Electronic Devices\\%, {Communication Systems}, Electronic Devices, Introduction to Electrical Engineering Practice \\%+Lab%Microprocessors%Dynamical%Systems
+\textbf{Electrical} & Advanced Computer Architechture, {Digital Systems}, {Signal Processing}, Information Theory and Coding\\% {Error Correcting Codes}, Cryptography, {Communication Systems}, Analog Circuits, Electronic Devices\\%, {Communication Systems}, Electronic Devices, Introduction to Electrical Engineering Practice \\%+Lab%Microprocessors%Dynamical%Systems
 \textbf{Control Systems} & Nonlinear Dynamical Systems, Multivariable Control, Optimal Control, Behavioral Theory of Systems\\ %Control and Computing Laboratory, Control Systems 
-\textbf{Computer Science}& Data Structures and Algorithms, Design of Algorithms, Operating Systems, Computer Networks,\newline Digital Image Processing\footnotemark[2], Intelligent and Learning Agents, Formal Methods in Machine Learning\\%, Computer Programming and Utilization\\%{Introduction to Machine Learning}
+\textbf{Computer Science}& Data Structures and Algorithms, Design of Algorithms, Operating Systems, Computer Networks,\newline Digital Image Processing, Intelligent and Learning Agents, Formal Methods in Machine Learning\\%, Computer Programming and Utilization\\%{Introduction to Machine Learning}
 \textbf{Mathematics}& 
 Calculus, Complex Analysis, Differential Equations, Linear Agebra, Large Sparse Matrix Computations,\newline Logic for Computer Science, Discrete Structures, Number Theory, Topics in Cryptology, \newline Game Theory and Mechanism Design, Probability and Random Processes, Stochastic Optimisation\\%An Introduction to %Game Theory
 %\textbf{Physics}& Quantum Physics and Application, Basics of Electricity and Magnetism                 \\
 % \textbf{Coursera}& {Deep Learning Specialization} (deeplearning.ai)\\% by deeplearning.ai 
 % \textbf{Bootcamps}& Tinkering, Data Analytics, Scientific Computation and Mathematical Modelling, Quantum Computing
 \end{tabular}
-\begin{description}
-\item {\hfill\footnotesize\textsuperscript\textdagger\textsl{to be completed by November 2023}}
-\end{description}
+% \begin{description}
+% \item {\hfill\footnotesize\textsuperscript\textdagger\textsl{to be completed by November 2023}}
+% \end{description}
 \section{Extracurriculars}
 \begin{tabular}{p{0.99in}p{6.01in}}
 \vspace{-0.5em}
-\small\textbf{Technical}\newline{\scriptsize\textsl{(2019-2021)}} 	& 
-\vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{Technical} & %\newline{\scriptsize\textsl{(2019-2021)}} 	& 
+\vspace{-0.5em}
 \begin{itemize}
 	% \item Built a \textbf{RC Bot} capable of negotiating obstacles and designed \& fabricated a \textbf{RC Trainer Plane}%\rhs{2019}
-	\item Completed Summer of Science in \textbf{Game Theory} and \textbf{Nonlinear Dynamics} by Maths and Physics Club
 	% \item Completed \textbf{Scientific Computing} \& \textbf{Data Analytics} Bootcamps and \textbf{Quantum Computing} Workshop%\rhs{2020}
-	\item Qualified Round 1 of \textbf{Mathathon} conducted by Maths and Physics Club, IIT Bombay
+	\item Qualified Round 1 of \textbf{Mathathon} conducted by Maths and Physics (MnP) Club, IIT Bombay\ \rhsmall{2021}
+	\item Completed Summer of Science in \textbf{Nonlinear Dynamics} and \textbf{Game Theory} by MnP Club\ \rhsmall{2020, 2021}
 \end{itemize}\\[-1em]\hline
 % \small\textbf{NCC}\newline{\scriptsize\textsl{(2019-2020)}} 	& 
-% \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+% \vspace{-0.5em}
 % \begin{itemize}
 % 	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay%{\footnotesize\hfill\textsl{(2019--20)}}
 % 	\item Attended ten-day-long NCC \textbf{Annual Training Camp} (ATC) held during November-December 2019
@@ -441,32 +472,33 @@ Calculus, Complex Analysis, Differential Equations, Linear Agebra, Large Sparse 
 % 	\item Participated in \textbf{Group Act Competition}, Cultural GC organised by NCC IIT Bombay	
 % \end{itemize}\\[-1em]\hline
 \vspace{-0.5em}
-\small\textbf{Volunteering}\newline{\scriptsize\textsl{(2019-2022)}} & \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{Volunteering} & \vspace{-0.5em}
 \begin{itemize}
-	\item Conducted an institute-wide \textbf{Computer Programming} session (TSC) attended by {100+ students} for discussing doubts and previous year papers, organized by the Student Support Services, IIT Bombay%solving%
-	\item Contributed to Career Counselling Campaign and A Session on Climate Change for \textbf{12,000+} indigent students conducted by \textbf{Abhyuday} in association with \textbf{NCC} across \textbf{80+} schools in Mumbai%from 8\textsuperscript{th} to 12\textsuperscript{th} 
-	\item \textbf{Mentored} students appearing for JEE during the \textbf{COVID-19} crisis as a part of \textbf{CovEd Education}% initiative%{\footnotesize\hfill\textsl{(2020)}}
+	\item Conducted an institute-wide \textbf{Computer Programming} session (TSC) attended by {100+ students} for discussing doubts and previous year papers, organized by the Student Support Services\ \rhsmall{2022}%solving%
+	\item Contributed to Career Counselling Campaign and A Session on Climate Change for \textbf{12,000+} indigent students conducted by \textbf{Abhyuday} in association with \textbf{NCC} across \textbf{80+} schools in Mumbai\ \rhsmall{2019}%from 8\textsuperscript{th} to 12\textsuperscript{th} 
+	\item \textbf{Mentored} students appearing for JEE during \textbf{COVID-19} crisis as a part of \textbf{CovEd Education}\ \rhsmall{2020}% initiative%{\footnotesize\hfill\textsl{(2020)}}
 	% \item Volunteered for Career Counselling Campaign and A Session on Climate Change for 12,000+ underprivileged students from 8\textsuperscript{th} to 12\textsuperscript{th} conducted by \textbf{Abhyuday} in association with \textbf{NCC} across 80+ schools in Mumbai
 \end{itemize}\\[-1em]\hline
 \vspace{-0.5em}
-\small\textbf{Sports}\newline{\scriptsize\textsl{(2020-2022)}}	& \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{Sports}	& \vspace{-0.5em}
 \begin{itemize}
-	\item Part of the \textbf{Inter-Department E-Sports} Fest winning squad representing the \textbf{Smashkarts} team
-	\item Awarded the title of \textbf{Best Smashkarts Player} by Electrical Engineering Students Association (EESA) 
-	\item Represented IIT Bombay in \textbf{Inter-College Cricket} Competition at the Annual Training Camp, NCC
+	\item Secured 2\textsuperscript{nd} runner-up in the \textbf{Inter-IIT Scrabble} League representing the IIT Bombay contigent\ \rhsmall{2020}%11 June 2020
+	\item Part of the \textbf{Inter-Department E-Sports} Fest winning squad representing the \textbf{Smashkarts} team\ \rhsmall{2022}
+	\item Awarded the title of \textbf{Best Smashkarts Player} by Electrical Engineering Students Association\  \rhsmall{2022}
+	\item Represented IIT Bombay in \textbf{Inter-College Cricket} Competition organised by NCC, IIT Bombay\ \rhsmall{2019}
 \end{itemize}\\[-1em]\hline
 \vspace{-0.5em}
-\small\textbf{NCC}\newline{\scriptsize\textsl{(2020)}}	& \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{NCC}	& \vspace{-0.5em}
 \begin{itemize}
-	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay%{\footnotesize\hfill\textsl{(2019--20)}}
-	\item Attended ten-day-long NCC \textbf{Annual Training Camp} (ATC) held during November-December 2019
-	\item Part of \textbf{Republic Day Parade Contingent} held on 26\textsuperscript{th} January 2020 at IIT Bombay Gymkhana% Ground
+	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay\ \rhsmall{2019}%{\footnotesize\hfill\textsl{(2019--20)}}
+	\item Attended a ten-day-long \textbf{Annual Training Camp} (ATC) organised by NCC, IIT Bombay\ \rhsmall{2019}
+	\item Part of \textbf{Republic Day Parade} Contingent held on 26\textsuperscript{th} January 2020 at IIT Bombay Gymkhana\ \rhsmall{2020}
 \end{itemize}\\[-1em]\hline
 \vspace{-0.5em}
-\small\textbf{Culturals}\newline{\scriptsize\textsl{(2020)}}	& \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{Culturals} & \vspace{-0.5em}
 \begin{itemize}
-	\item Participated in \textbf{Group Act Competition}, Cultural GC organised by NCC IIT Bombay	
-	\item Studied \textbf{Beginner Music Theory} as a part of Summer School of Cult conducted by ICC
+	\item Participated in \textbf{Group Act Competition}, Cultural GC organised by NCC IIT Bombay\ \rhsmall{2019}
+	\item Studied \textbf{Beginner Music Theory} as a part of Summer School of Cult conducted by ICC\ \rhsmall{2020}
 \end{itemize}
 \end{tabular}
 \end{document}
