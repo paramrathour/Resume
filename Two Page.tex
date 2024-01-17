@@ -1,7 +1,7 @@
 \documentclass[10pt, a4paper]{article}
 
 \usepackage{microtype}
-
+\usepackage{mathtools,bm}
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 \renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \usepackage{float}
@@ -24,9 +24,7 @@
 \usepackage[dvipsnames]{xcolor}
 \definecolor{DarkBlue}{RGB}{2,7,128}
 \usepackage{titlesec}
-\titleformat{\section}{\vspace{-1.4em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
-% \titleformat{\subsection}{\vspace{-1.2em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
-% \titleformat{\section}{\vspace{-1.4em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
+\titleformat{\section}{\vspace{-1.4em}\bfseries\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
 \usepackage{import}
 \usepackage{enumitem}
 \usepackage{textcomp}
@@ -52,7 +50,8 @@
 Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 \section{Scholastic Achievements}
 \begin{itemize}
-	\item Achieved a perfect \textbf{10 SPI} (Semester Performance Index) with 36 credits during the 8\textsuperscript{th} semester at IIT Bombay\rhsmall{2023}
+	\item Achieved a perfect \textbf{10 SPI} during the 8\textsuperscript{th} and 9\textsuperscript{th} semesters at IIT Bombay with 36 and 48 credits, respectively\rhsmall{2023}%(Semester Performance Index)
+	\item Awarded an \textbf{AP} grade for exceptional performance in the Advanced Computer Architecture course at IIT Bombay\rhsmall{2023}
 	\item Secured \textbf{All India Rank 926} in Joint Entrance Examination (\textbf{JEE}) \textbf{Advanced} among 161 thousand candidates\rhsmall{2019}
 	\item Secured \textbf{99.9\%} percentile in Joint Entrance Examination (\textbf{JEE}) \textbf{Main} among 1.1 million candidates\rhsmall{2019}
 	\item Recipient of the National Talent Search (\textbf{NTS}) Scholarship received by the top 1000 students in the country\rhsmall{2017}
@@ -70,38 +69,23 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 	\item Integrated a 1-D arbiter class template to the NVLink performance model while thoroughly maintaining its functionality
 \end{itemize}
 % \vspace{0.5em}
-\section{Research Projects}
-\vspace{-0.2em}
-\head{Computational Commutative Algebra and Geometry}\rhsmall{July 2022 - Nov 2022}\\ 
-\lhsmall{Guide: Prof. Debasattam Pal}\rhsmalle{Supervised Research Exposition}
-\begin{itemize}
-	\item Investigated into the theory and computation of \textbf{Gr\"obner Bases} for Ideals in a polynomial ring $\mathsf{k[x_1,\ldots,x_n]}$ over a field $\mathsf{F}$
-	\item Explored the algebraic and geometric applications of Gr\"obner Bases in solving Ideals, Varieties and Nullstellensatz problems
-	\item Implemented fast solvers for system of linear \& polynomial equations and Sudoku in \textbf{SageMath} using Elimination Theory
-\end{itemize}
-\head{Coded Computing for Straggler Mitigation, Security and Privacy}\rhsmall{Sep 2021 - Nov 2021}\\
-\lhsmall{Guide: Prof. Nikhil Karamchandani}\rhsmalle{EE605 $\mid$ Error Correcting Codes $\mid$ Course Project}
-\begin{itemize}
-	\item Investigated polynomial coding and Lagrange Coded Computing (LCC) techniques to mitigate fundamental bottlenecks in \textbf{Large-Scale Distributed Computing} for computing matrix multiplications and evaluating arbitrary multivariate polynomials
-    \item Explored applications of LCC in secure \& private \textbf{Multi-Party Computing} (MPC) and \textbf{privacy-preserving} {machine learning}% (MPC) %Resilient
-\end{itemize}
-\head{Pushdown Timed Automata: Theory and Practice}\rhsmall{May 2022 - Dec 2022}\\
-\lhsmall{Guide: Prof. Akshay S.}\rhsmalle{CS490 $\mid$ Research and Development $\mid$ Academic Project}
-\begin{itemize}
-	\item Conceptualized modelling problems for Pushdown Timed Automata (PDTA) from {Embedded Systems} and {WCET Benchmarks}%Worst-case execution time
-	\item Conducted intensive review of various tools for the simulation and \textbf{reachability analysis} of Pushdown Automata \& PDTA%Pushdown Automata
-	\item Developed methodology to extract Pushdown Systems of \textbf{Boolean} and \textbf{Remopla} programs using \textbf{Moped} Model Checker
-\end{itemize}
-\head{Data-Driven Dynamical Systems}\rhsmall{Jan 2023 - May 2023}\\
-\lhsmall{Guide: Prof. Vivek Borkar}\rhsmalle{EE736 $\mid$ Stochastic Optimization $\mid$ Course Project}
-\begin{itemize}
-	\item Reviewed the paradigms of Koopman Theory, Dynamic Mode Decomposition (\textbf{DMD}) and Extended DMD with control
-	\item Examined the ideas for discovering governing equations from data by Sparse Identification of Nonlinear Dynamics (\textbf{SINDy})
-	\item Investigated into {Compressed Sensing} and \textbf{Sparse Regression} techniques for solving the intermediate stages of SINDy
-\end{itemize}
-% \clearpage
 \section{Key Projects}
 \vspace{-0.2em}
+\head{Visual Learning and Recognition of 3-D Objects from Appearance}\rhsmall{Oct 2023 - Nov 2023}\\
+\lhsmall{Guide: Prof. Ajit Rajwade}\rhsmalle{CS663 $\mid$ Fundamentals of Digital Image Processing $\mid$ Course Project}
+\begin{itemize}
+	\item Implemented a high-performance training and testing pipeline for object detection and pose estimation using \textbf{Python}% using the COIL-100 dataset
+	\item Utilised Principal Component Analysis \textbf{(PCA)} and cubic interpolation to construct parametric manifolds for each object
+	\item Conducted a comprehensive study across objects with varying complexities to determine \textbf{optimal} hyperparameter values
+	\item Achieved an object recognition accuracy of \textbf{99.172\%} and a mean pose error of \textbf{6.872}$^{\bm\circ}$ by using the \textbf{COIL-100} dataset
+\end{itemize}
+\head{Efficient Cache Replacement Policy using Reinforcement Learning}\rhsmall{Sep 2023 - Nov 2023}\\
+\lhsmall{Guide: Prof. Biswabandan Panda}\rhsmalle{CS683 $\mid$ Advanced Computer Architecture $\mid$ Course Project}
+\begin{itemize}
+	\item Implemented Reinforcement Learned Replacement (RLR), an eviction policy based on {age, hit} and {type} priority of cache-lines%\textbf{cost-effective} 
+	\item Designed Micro-Armed Bandit-based (MAB) replacement, utilising \textbf{temporal homogeneity} in the action space of policies%LRU, SHiP, SRRIP, DRRIP
+	\item Evaluated both policies in \textbf{ChampSim} using 49 memory intensive traces from \textbf{SPEC} 2017 benchmarks and achieved an overall IPC speedup over LRU of \textbf{5\% }for RLR and \textbf{1.2\%} for MAB with LRU, SHiP, SRRIP, DRRIP in its action space
+\end{itemize}
 \head{Intelligent and Learning Agents}\rhsmall{Jul 2021 - Nov 2021}\\
 \lhsmall{Guide: Prof. Shivaram Kalyanakrishnan}\rhsmalle{CS747 $\mid$ Foundations of Intelligent and Learning Agents $\mid$ Course Project}
 \begin{itemize}
@@ -116,13 +100,44 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 	\item Executed \textbf{sensor fusion} using complementary \& \textbf{Kalman filter} for estimating the orientation of inertial measurement units
 	\item Implemented stabilisation of Rotary Inverted Pendulum using Swing-Up Control and \textbf{Linear-Quadratic Regulator} Control%Furuta pendulum%stabilization
 \end{itemize}
-\clearpage
+\head{Coded Computing for Straggler Mitigation, Security and Privacy}\rhsmall{Sep 2021 - Nov 2021}\\
+\lhsmall{Guide: Prof. Nikhil Karamchandani}\rhsmalle{EE605 $\mid$ Error Correcting Codes $\mid$ Course Project}
+\begin{itemize}
+	\item Investigated polynomial coding and Lagrange Coded Computing (LCC) techniques to mitigate fundamental bottlenecks in \textbf{Large-Scale Distributed Computing} for computing matrix multiplications and evaluating arbitrary multivariate polynomials
+    \item Explored applications of LCC in secure \& private \textbf{Multi-Party Computing} (MPC) and \textbf{privacy-preserving} {machine learning}% (MPC) %Resilient
+\end{itemize}
 \head{Dining Philosophers: A Synchronisation Problem}\rhsmall{Jan 2022 - May 2022}\\
 \lhsmall{Guide: Prof. Mythili Vutukuru}\rhsmalle{CS347 $\mid$ Operating Systems $\mid$ Course Project}
 \begin{itemize}
 	\item Modelled the threads by creating custom semaphores using condition variables and mutex abstractions of \textbf{pthreads} API
 	\item Devised and implemented two solutions by using \textbf{semaphores} and \textbf{condition variables} each and proved their correctness
 \end{itemize}
+\clearpage
+\head{Pushdown Timed Automata: Theory and Practice}\rhsmall{May 2022 - Dec 2022}\\
+\lhsmall{Guide: Prof. Akshay S.}\rhsmalle{CS490 $\mid$ Research and Development $\mid$ Academic Project}
+\begin{itemize}
+	\item Conceptualized modelling problems for Pushdown Timed Automata (PDTA) from {Embedded Systems} and {WCET Benchmarks}%Worst-case execution time
+	\item Conducted intensive review of various tools for the simulation and \textbf{reachability analysis} of Pushdown Automata \& PDTA%Pushdown Automata
+	\item Developed methodology to extract Pushdown Systems of \textbf{Boolean} and \textbf{Remopla} programs using \textbf{Moped} Model Checker
+\end{itemize}
+\head{Computational Commutative Algebra and Geometry}\rhsmall{Jul 2022 - Nov 2022}\\ 
+\lhsmall{Guide: Prof. Debasattam Pal}\rhsmalle{Supervised Research Exposition}
+\begin{itemize}
+	\item Investigated into the theory and computation of \textbf{Gr\"obner Bases} for Ideals in a polynomial ring ${k[x_1,\ldots,x_n]}$ over a field ${F}$
+	\item Explored the algebraic and geometric applications of Gr\"obner Bases in solving Ideals, Varieties and Nullstellensatz problems
+	\item Implemented fast solvers for system of linear \& polynomial equations and Sudoku in \textbf{SageMath} using Elimination Theory
+\end{itemize}
+\head{Data-Driven Dynamical Systems}\rhsmall{Jan 2023 - May 2023}\\
+\lhsmall{Guide: Prof. Vivek Borkar}\rhsmalle{EE736 $\mid$ Stochastic Optimization $\mid$ Course Project}
+\begin{itemize}
+	\item Reviewed the paradigms of Koopman Theory, Dynamic Mode Decomposition (\textbf{DMD}) and Extended DMD with control
+	\item Examined the ideas for discovering governing equations from data by Sparse Identification of Nonlinear Dynamics (\textbf{SINDy})
+	\item Investigated into {Compressed Sensing} and \textbf{Sparse Regression} techniques for solving the intermediate stages of SINDy
+\end{itemize}
+% \clearpage
+% \section{Key Projects}
+% \vspace{-0.2em}
+% \clearpage
 \head{Distributed Deep Learning}\rhsmall{Mar 2020 - Jul 2020}\\
 \lhsmall{Institute Technical Summer Project (ITSP)}\rhsmalle{Institute Technical Council, IIT Bombay}
 \begin{itemize}
@@ -131,35 +146,23 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 	% \item Compared the performance of \textbf{VGG16,  ResNet}, and \textbf{AlexNet} when used as the underlying Neural Networks%LeNet,DenseNet%state-of-the-art nets such as 	
 	\item Verified the approach by using Kaggle's \textbf{Retinal OCT} dataset and analysed loss of information due to spatial segmentation%\textbf{CINIC-10} Datasets on Kaggle %with accuracy more than 70\%
 \end{itemize}
-\head{Two-Way Fetch Superscalar Processor}\rhsmall{Jan 2022 - May 2022}\\
-\lhsmall{Guide: Prof. Virendra Singh}\rhsmalle{EE739 $\mid$ Processor Design $\mid$ Course Project}
-\begin{itemize}
-	\item Designed a \textbf{six-stage} 16-bit superscalar processor capable of handling \textbf{19} arithmetic, logical, and branching instructions
-	\item Employed two-way instruction fetch, decode, dispatch, execute and write-back stages with \textbf{branch prediction} techniques
-	\item Designed a \textbf{16-bit} \textbf{signed ALU} implementing addition using \textbf{Kogge-Stone} fast adder and verified it using Intel Quartus %Prime%high performing
-\end{itemize}
-\head{Cryptanalysis of Pseudorandom Generators}\rhsmall{Jan 2023 - May 2023}\\
-\lhsmall{Guide: Prof. Virendra Sule}\rhsmalle{EE720, EE793 $\mid$ Cryptology $\mid$ Course Project}
-\begin{itemize}%Pseudorandom Bit Multisequences
-	\item Analysed Linear Complexity (LC) profiles of the bit multi-sequences with \textbf{3-SAT}, Quadratic Residue and Exponential Map
-	\item Implemented reduced-\textbf{Moustique}, a self-synchronising stream cipher, achieving \textbf{almost perfect LC} profiles in \textbf{SageMath}
-\end{itemize}
+% \head{Two-Way Fetch Superscalar Processor}\rhsmall{Jan 2022 - May 2022}\\
+% \lhsmall{Guide: Prof. Virendra Singh}\rhsmalle{EE739 $\mid$ Processor Design $\mid$ Course Project}
+% \begin{itemize}
+% 	\item Designed a \textbf{six-stage} 16-bit superscalar processor capable of handling \textbf{19} arithmetic, logical, and branching instructions
+% 	\item Employed two-way instruction fetch, decode, dispatch, execute and write-back stages with \textbf{branch prediction} techniques
+% 	\item Designed a \textbf{16-bit} \textbf{signed ALU} implementing addition using \textbf{Kogge-Stone} fast adder and verified it using Intel Quartus %Prime%high performing
+% \end{itemize}
+% \head{Cryptanalysis of Pseudorandom Generators}\rhsmall{Jan 2023 - May 2023}\\
+% \lhsmall{Guide: Prof. Virendra Sule}\rhsmalle{EE720, EE793 $\mid$ Cryptology $\mid$ Course Project}
+% \begin{itemize}%Pseudorandom Bit Multisequences
+% 	\item Analysed Linear Complexity (LC) profiles of the bit multi-sequences with \textbf{3-SAT}, Quadratic Residue and Exponential Map
+% 	\item Implemented reduced-\textbf{Moustique}, a self-synchronising stream cipher, achieving \textbf{almost perfect LC} profiles in \textbf{SageMath}
+% \end{itemize}
 \section{Positions of Responsibility}
 \vspace{-0.2em}
-\head{Teaching Assistant $\mid$ IIT Bombay}\\
-% \lhsmall{Guide: Prof. Bhaskaran Raman, Prof. Parag Chaudhuri, Prof. Akshay S., Prof. Ajit Rajwade, Prof Madhu Belur}\\
-{\small\textbf{Computer Programming and Utilisation $\mid$ CS101}} \rhsmalle{Autumn 2020, Autumn 2021, Spring 2022, Autumn 2022}
-\begin{itemize}
-	\item Academically guided \textbf{50} students and cleared their doubts through weekly doubt sessions, labs and personal interaction
-	\item Prepared and evaluated examinations \& lab problems and conducted Hindi help sessions for students facing language barriers
-	\item Brainstormed \textbf{60+ practice problems} for CS101, shared via a personal \textbf{webpage} with tips and resources to boost interest% and more resources% to enhance interest%understanding
-\end{itemize}
-{\small\textbf{Multivariable Control $\mid$ EE640}}\rhsmalle{Autumn 2023 (Present)}
-\begin{itemize}
-	\item Academically guiding \textbf{40+} students, clearing their doubts through tutorials and assisting the instructor in course logistics
-\end{itemize}
 \head{IIT Bombay Racing $\mid$ Electrical Subsystem}\\
-{\small\textsl{Faculty Advisor: Prof. Amber Shrivastava}}\\% $\mid$ Dept. Of Mechanical Engineering, IIT Bombay}
+% {\small\textsl{Faculty Advisor: Prof. Amber Shrivastava}}\\% $\mid$ Dept. Of Mechanical Engineering, IIT Bombay}
 {\small\textsl{A cross-functional team of 70+ students which designs, fabricates and assembles an Electric Race Car for Formula Student (FS) UK}}\\% an international studnets race car} 
 % \item \small\textsl{First Indian team to win the Engineering Design event in the history of FSUK (4\textsuperscript{th} overall out of 73 international teams)}
 {\small\textbf{Junior Design Engineer} $\mid$ LV Safety Subsystem}\rhsmalle{Sep 2020 - May 2021}
@@ -177,6 +180,18 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 	\item Investigated the {Electronic Control Unit} (\textbf{ECU}) subsystem, working with {RPM} and {position sensors} and realised the working of the steering, acceleration pedal and brake sensors of the car with \textbf{Arduino IDE} (Integrated Development Environment)
 	\item Acquired knowledge of {Controller Area Network} (\textbf{CAN}) protocol \& {Data Acquisition} (\textbf{DAQ}) system and their implementation, programmed code for wireless communication using \textbf{LPC1768 Mbed} microcontroller and \textbf{XBee} module
 \end{itemize}
+\head{Teaching Assistant $\mid$ IIT Bombay}\\
+% \lhsmall{Guide: Prof. Bhaskaran Raman, Prof. Parag Chaudhuri, Prof. Akshay S., Prof. Ajit Rajwade, Prof Madhu Belur}\\
+{\small\textbf{Computer Programming and Utilisation $\mid$ CS101}} \rhsmalle{Autumn 2020, Autumn 2021, Spring 2022, Autumn 2022}
+\begin{itemize}
+	\item Academically guided \textbf{50} students and cleared their doubts through weekly doubt sessions, labs and personal interaction
+	\item Prepared and evaluated examinations \& lab problems and conducted Hindi help sessions for students facing language barriers
+	\item Brainstormed \textbf{60+ practice problems} for CS101, shared via a personal \textbf{webpage} with tips and resources to boost interest% and more resources% to enhance interest%understanding
+\end{itemize}
+{\small\textbf{Multivariable Control $\mid$ EE640}}\rhsmalle{Autumn 2023}
+\begin{itemize}
+	\item Academically guided \textbf{40+} students, clearing their doubts through tutorials and assisting the instructor in course logistics
+\end{itemize}
 \head{Mentor $\mid$ Summer of Science}\rhsmall{Summer 2021, Summer 2022, Summer 2023}\\
 \lhsmall{Topics: Linear Algebra, Data Structures and Algorithms, Cryptography, Reinforcement Learning}\rhsmalle{Maths and Physics Club, IIT Bombay}
 \begin{itemize}
@@ -187,9 +202,10 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 \vspace{-0.3em}
 \hspace{-5pt}
 \begin{tabular}{p{1.15in}p{5.85in}}
-\textbf{Languages}& C, C\texttt{++}, Python, Julia, MATLAB, Scilab, \LaTeX, HTML, CSS,  SQL\\
+\textbf{Languages}& C, C\texttt{++}, Python, Julia, MATLAB, Scilab, \LaTeX, HTML, CSS,  SQL, Embedded C, VHDL, MIPS, 8086\\%Assembly
 \textbf{Frameworks}& Git, Docker, SageMath, Qiskit, NumPy, SciPy, pandas, scikit-learn, OpenCV, TensorFlow, Keras, Jekyll\\%Matplotlib% Selenium, Beautiful Soup, PyAutoGUI,%SymPy,%seaborn,%PyTesseract
-\textbf{Hardware}& Embedded C, VHDL, MIPS, 8051, 8086 Assembly, CPLD, Arduino, ESP32, Raspberry Pi 4, Tiva-C%, Pt-51%, Krypton\\
+\textbf{Software}& Simulink, EAGLE, SPICE, Intel Quartus, Keil $\mu$Vision, GNURadio, Adobe Illustrator, SOLIDWORKS\\%%Simulink
+% \textbf{Hardware}& Embedded C, VHDL, MIPS, 8051, 8086 Assembly, Arduino, ESP32, Raspberry Pi 4, Tiva-C%, Pt-51%, Krypton\\
 \end{tabular}
 \section{Key Courses Undertaken}
 \setlength\tabcolsep{0.3em}
@@ -197,8 +213,8 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 \hspace{-5pt}
 \begin{tabular}{p{1.15in}p{5.85in}}
 %{\linespread{1.8}
-\textbf{Electrical} & Advanced Computer Architechture\footnotemark[2], {Digital Systems}, {Signal Processing}, Information Theory and Coding\\%, {Communication Systems}, Electronic Devices, Introduction to Electrical Engineering Practice \\%+Lab%Microprocessors%Dynamical%Systems
-\textbf{Computer Science}& Operating Systems, Computer Networks, Data Structures, Design and Analysis of Algorithms,\newline Digital Image Processing\footnotemark[2], Intelligent and Learning Agents, Formal Methods in Machine Learning\\%, Computer Programming and Utilization\\%{Introduction to Machine Learning}
+\textbf{Electrical} & Advanced Computer Architechture, {Digital Systems}, {Signal Processing}, Information Theory and Coding\\%, {Communication Systems}, Electronic Devices, Introduction to Electrical Engineering Practice \\%+Lab%Microprocessors%Dynamical%Systems
+\textbf{Computer Science}& Operating Systems, Computer Networks, Data Structures, Design and Analysis of Algorithms,\newline Advanced Image Processing\footnotemark[2], Intelligent and Learning Agents, Formal Methods in Machine Learning\\%, Computer Programming and Utilization\\%{Introduction to Machine Learning}
 \textbf{Mathematics}& Linear Algebra, %{Matrix Computations}, 
 Large Sparse Matrix Computations, Game Theory and Algorithmic Mechanism Design,\newline Probability and Random Processes, Stochastic Optimisation, Logic, Number Theory and Cryptography\\%An Introduction to 
 %\textbf{Physics}& Quantum Physics and Application, Basics of Electricity and Magnetism                 \\
@@ -206,28 +222,66 @@ Large Sparse Matrix Computations, Game Theory and Algorithmic Mechanism Design,\
 \textbf{Bootcamps}& Data Analytics, Scientific Computation and Mathematical Modelling, Quantum Computing, Tinkering
 \end{tabular}
 \begin{description}
-\item {\hfill\footnotesize\textsuperscript\textdagger\textsl{to be completed by November 2023}}
+\item {\hfill\footnotesize\textsuperscript\textdagger\textsl{to be completed by May 2024}}
 \end{description}
 \vspace{-1.4em}
 \section{Extracurriculars}
 \vspace{-0.5em}
 \begin{tabular}{p{0.99in}p{6.01in}}
 \vspace{-0.5em}
-\small\textbf{Volunteering}\newline{\scriptsize\textsl{(2019-2022)}} & \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+% \vspace{-0.5em}
+% \small\textbf{Technical} & %\newline{\scriptsize\textsl{(2019-2021)}} 	& 
+% \vspace{-0.5em}
+% \begin{itemize}
+% 	% \item Built a \textbf{RC Bot} capable of negotiating obstacles and designed \& fabricated a \textbf{RC Trainer Plane}%\rhs{2019}
+% 	% \item Completed \textbf{Scientific Computing} \& \textbf{Data Analytics} Bootcamps and \textbf{Quantum Computing} Workshop%\rhs{2020}
+% 	\item Qualified Round 1 of \textbf{Mathathon} conducted by Maths and Physics (MnP) Club, IIT Bombay\ \rhsmall{2021}
+% 	\item Completed Summer of Science in \textbf{Nonlinear Dynamics} and \textbf{Game Theory} by MnP Club\ \rhsmall{2020, 2021}
+% \end{itemize}\\[-1em]\hline
+% \small\textbf{NCC}\newline{\scriptsize\textsl{(2019-2020)}} 	& 
+% \vspace{-0.5em}
+% \begin{itemize}
+% 	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay%{\footnotesize\hfill\textsl{(2019--20)}}
+% 	\item Attended ten-day-long NCC \textbf{Annual Training Camp} (ATC) held during November-December 2019
+% 	\item Part of \textbf{Republic Day Parade Contingent} held on 26\textsuperscript{th} January 2020 at IIT Bombay Gymkhana Ground
+% 	\item Represented IIT Bombay in \textbf{Inter-College Cricket} Competition at (ATC) organised by NCC
+% 	\item Participated in \textbf{Group Act Competition}, Cultural GC organised by NCC IIT Bombay	
+% \end{itemize}\\[-1em]\hline
+% \vspace{-0.5em}
+\small\textbf{Volunteering} & \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
 \begin{itemize}
-	\item Conducted an institute-wide \textbf{Computer Programming} session (TSC) attended by {100+ students}% and discussing doubts \& previous year papers, organized by the Student Support Services, IIT Bombay%solving%
-	\item Contributed to Career Counselling Campaign for 12,000+ indigent students by \textbf{Abhyuday} and \textbf{NCC}
-	\item \textbf{Mentored} students appearing for JEE during the \textbf{COVID-19} crisis as a part of \textbf{CovEd Education}% initiative%{\footnotesize\hfill\textsl{(2020)}}
+	\item Conducted an institute-wide \textbf{Computer Programming} session (TSC) attended by {100+ students}\ \rhsmall{2022}% and discussing doubts \& previous year papers, organized by the Student Support Services, IIT Bombay%solving%
+	\item Contributed to Career Counselling Campaign for 12,000+ indigent students by \textbf{Abhyuday}\ \rhsmall{2019}
+	\item \textbf{Mentored} JEE students during the \textbf{COVID-19} crisis as a part of \textbf{CovEd Education}\ \rhsmall{2020}% initiative%{\footnotesize\hfill\textsl{(2020)}}
 \end{itemize}\\[-1em]\hline
 \vspace{-0.5em}
-\small\textbf{Miscellaneous}\newline{\scriptsize\textsl{(2019-2022)}}	& \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{Miscellaneous}	& \vspace{-0.5em}
 \begin{itemize}
-	% \item Built a \textbf{RC Bot} capable of negotiating obstacles and designed \& fabricated a \textbf{RC Trainer Plane}%\rhs{2019}
-	\item Composed articles on exciting labs and scientific content as an \textbf{Editor} of the Department Newsletter 
-	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay%{\footnotesize\hfill\textsl{(2019--20)}}
-	\item Represented IIT Bombay in \textbf{Inter-College Cricket} Competition at the Annual Training Camp, NCC
-	\item Part of the \textbf{Inter-Department E-Sports} Fest winning squad representing the \textbf{Smashkarts} team
-\end{itemize}
+	\item Composed articles on exciting labs and scientific content as an \textbf{Editor} of Department Newsletter\ \rhsmall{2020}%11 June 2020
+	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay\ \rhsmall{2019}%{\footnotesize\hfill\textsl{(2019--20)}}
+	\item Part of the \textbf{Inter-Department E-Sports} Fest winning squad representing the \textbf{Smashkarts} team\ \rhsmall{2022}
+\end{itemize}%\\[-1em]\hline
+% \vspace{-0.5em}
+% \small\textbf{Sports}	& \vspace{-0.5em}
+% \begin{itemize}
+% 	\item Secured 2\textsuperscript{nd} runner-up in the \textbf{Inter-IIT Scrabble} League representing the IIT Bombay contigent\ \rhsmall{2020}%11 June 2020
+% 	\item Part of the \textbf{Inter-Department E-Sports} Fest winning squad representing the \textbf{Smashkarts} team\ \rhsmall{2022}
+% 	% \item Awarded the title of \textbf{Best Smashkarts Player} by Electrical Engineering Students Association\  \rhsmall{2022}
+% 	\item Represented IIT Bombay in \textbf{Inter-College Cricket} Competition organised by NCC, IIT Bombay\ \rhsmall{2019}
+% \end{itemize}%\\[-1em]\hline
+% \vspace{-0.5em}
+% \small\textbf{NCC}	& \vspace{-0.5em}
+% \begin{itemize}
+% 	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay\ \rhsmall{2019}%{\footnotesize\hfill\textsl{(2019--20)}}
+% 	\item Attended a ten-day-long \textbf{Annual Training Camp} (ATC) organised by NCC, IIT Bombay\ \rhsmall{2019}
+% 	\item Part of \textbf{Republic Day Parade} Contingent held on 26\textsuperscript{th} January 2020 at IIT Bombay Gymkhana\ \rhsmall{2020}
+% \end{itemize}\\[-1em]\hline
+% \vspace{-0.5em}
+% \small\textbf{Culturals} & \vspace{-0.5em}
+% \begin{itemize}
+% 	\item Participated in \textbf{Group Act Competition}, Cultural GC organised by NCC IIT Bombay\ \rhsmall{2019}
+% 	\item Studied \textbf{Beginner Music Theory} as a part of Summer School of Cult conducted by ICC\ \rhsmall{2020}
+% \end{itemize}
 \end{tabular}
 \end{document}
 %% end of file `template.tex'.

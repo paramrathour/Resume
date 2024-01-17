@@ -1,7 +1,7 @@
 \documentclass[10pt, a4paper]{article}
 
 \usepackage{microtype}
-
+\usepackage{mathtools,bm}
 \usepackage[utf8]{inputenc}                       % if you are not using xelatex ou lualatex, replace by the encoding you are using
 \renewcommand{\familydefault}{\sfdefault}         % to set the default font; use '\sfdefault' for the default sans serif font, '\rmdefault' for the default roman one, or any tex font name
 \usepackage{float}
@@ -24,9 +24,7 @@
 \usepackage[dvipsnames]{xcolor}
 \definecolor{DarkBlue}{RGB}{2,7,128}
 \usepackage{titlesec}
-\titleformat{\section}{\vspace{-1.4em}\bfseries\scshape\color{DarkBlue}\large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.4em}]
-% \titleformat{\subsection}{\vspace{-1.2em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
-% \titleformat{\section}{\vspace{-1.4em}\bfseries\scshape\color{DarkBlue}\Large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.2em}]
+\titleformat{\section}{\vspace{-1.4em}\bfseries\color{DarkBlue}\large}{}{0em}{}[\color{DarkBlue}\titlerule\vspace{-0.4em}]
 \usepackage{import}
 \usepackage{enumitem}
 \usepackage{textcomp}
@@ -52,18 +50,18 @@
 Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 \section{Scholastic Achievements}
 \begin{itemize}
-	\item Achieved a perfect \textbf{10 SPI} (Semester Performance Index) with 36 credits during the 8\textsuperscript{th} semester at IIT Bombay\rhsmall{2023}
+	\item Achieved a perfect \textbf{10 SPI} during the 8\textsuperscript{th} and 9\textsuperscript{th} semesters at IIT Bombay with 36 and 48 credits, respectively\rhsmall{2023}%(Semester Performance Index)
 	\item Secured \textbf{All India Rank 926} in Joint Entrance Examination (\textbf{JEE}) \textbf{Advanced} among 161 thousand candidates\rhsmall{2019}
 	\item Secured \textbf{99.9\%} percentile in Joint Entrance Examination (\textbf{JEE}) \textbf{Main} among 1.1 million candidates\rhsmall{2019}
 	\item Recipient of the National Talent Search (\textbf{NTS}) Scholarship received by the top 1000 students in the country\rhsmall{2017}
 	% \item Awarded Academic Excellence Scholarship (\textbf{AES}) by SOF given to a \textbf{single  student} per class in each state\rhsmall{2017}%Science Olympiad Foundation
 	% \item Recipient of the Maharashtra Talent Search (\textbf{MTS}) Scholarship  with \textbf{State Rank 11, 10,} and \textbf{16} respectively\rhsmall{2015-17}%given by Centre for Talent Search and Excellence \\N. Wadia College, Pune
 \end{itemize}
-\section{Work Experience}
-\vspace{-0.2em}
-% \section{Key Projects}
-\head{NVIDIA $\mid$ ASIC Intern $\mid$ GPU Subsystem}\rhsmalle{May 2022 - Jul 2022}\\
-\lhsmall{Guide: Raghuram L}
+% \section{Work Experience}
+% \vspace{-0.2em}
+\section{Key Projects}
+\head{NVIDIA $\mid$ Modeling the NVLink pipe ID in the GPU performance simulator}\rhsmalle{May 2022 - Jul 2022}\\
+\lhsmall{Guide: Raghuram L}\rhsmalle{GPU Subsystem $\mid$ ASIC Intern}
 % {\small\textbf{ASIC Intern} $\mid$ Modeling the \textbf{NVLINK} pipe ID in the GPU performance simulator using \textbf{PerfSim}}
 \begin{itemize}
 	% \item Explored modelling of the \textbf{NVLink} pipe ID using \textbf{PerfSim}, the GPU performance simulator developed using C\texttt{++} %building blocks, knobs, debugging, and architectural \& performance testing of models in C\texttt{++}
@@ -71,12 +69,27 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 	\item Integrated a 1-D arbiter class template to the NVLink performance model while thoroughly maintaining its functionality
 \end{itemize}
 % \vspace{0.5em}
-\section{Key Projects}
-\vspace{-0.2em}
+% \section{Key Projects}
+% \vspace{-0.2em}
+\head{Visual Learning and Recognition of 3-D Objects from Appearance}\rhsmall{Oct 2023 - Nov 2023}\\
+\lhsmall{Guide: Prof. Ajit Rajwade}\rhsmalle{CS663 $\mid$ Fundamentals of Digital Image Processing $\mid$ Course Project}
+\begin{itemize}
+	\item Implemented a high-performance training and testing pipeline for object detection and pose estimation using \textbf{Python}% using the COIL-100 dataset
+	% \item Utilised Principal Component Analysis \textbf{(PCA)} and cubic interpolation to construct parametric manifolds for each object
+	% \item Conducted a comprehensive study across objects with varying complexities to determine \textbf{optimal} hyperparameter values
+	\item Achieved an object recognition accuracy of \textbf{99.172\%} and a mean pose error of \textbf{6.872}$^{\bm\circ}$ by using the \textbf{COIL-100} dataset
+\end{itemize}
+\head{Efficient Cache Replacement Policy using Reinforcement Learning}\rhsmall{Sep 2023 - Nov 2023}\\
+\lhsmall{Guide: Prof. Biswabandan Panda}\rhsmalle{CS683 $\mid$ Advanced Computer Architecture $\mid$ Course Project}
+\begin{itemize}
+	% \item Implemented Reinforcement Learned Replacement (RLR), an eviction policy based on {age, hit} and {type} priority of cache-lines%\textbf{cost-effective} 
+	\item Designed Micro-Armed Bandit-based (MAB) replacement, utilising \textbf{temporal homogeneity} in the action space of policies%LRU, SHiP, SRRIP, DRRIP
+	\item Evaluated both policies in \textbf{ChampSim} using 49 memory intensive traces from \textbf{SPEC} 2017 benchmarks and achieved an overall IPC speedup over LRU of \textbf{5\% }for RLR and \textbf{1.2\%} for MAB with LRU, SHiP, SRRIP, DRRIP in its action space
+\end{itemize}
 \head{Intelligent and Learning Agents}\rhsmall{Jul 2021 - Nov 2021}\\
 \lhsmall{Guide: Prof. Shivaram Kalyanakrishnan}\rhsmalle{CS747 $\mid$ Foundations of Intelligent and Learning Agents $\mid$ Course Project}
 \begin{itemize}
-	\item Implemented and compared $\mathsf{\varepsilon}$-greedy, \textbf{UCB}, KL-UCB and Thompson Sampling for a stochastic multi-armed bandit framework
+	% \item Implemented and compared $\mathsf{\varepsilon}$-greedy, \textbf{UCB}, KL-UCB and Thompson Sampling for a stochastic multi-armed bandit framework
 	\item Performed \textbf{MDP Planning} using Value Iteration, Howard's Policy Iteration and Linear Programming with \textbf{PuLP} in Python
 	\item Propelled up a car placed at the bottom of a sinusoidal valley using \textbf{Sarsa} with \textbf{Tile Coding} in the \textbf{OpenAI} Gym environment
 \end{itemize}
@@ -99,22 +112,10 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 	% \item Developed a \textbf{Hierarchically-Distributed} Deep CNN in order to parallelise workload across nodes in the learning model
 	\item Developed a {Hierarchically-Distributed Deep CNN} learning model for training \textbf{super-high-resolution datasets} via {spatial segmentation} of each sample and observed an increase in \textbf{training speed} and a decrease in \textbf{memory utilisation} per node% in the hierarchy network
 	% \item Compared the performance of \textbf{VGG16,  ResNet}, and \textbf{AlexNet} when used as the underlying Neural Networks%LeNet,DenseNet%state-of-the-art nets such as 	
-	\item Verified the approach by using Kaggle's \textbf{Retinal OCT} dataset and analysed loss of information due to spatial segmentation%\textbf{CINIC-10} Datasets on Kaggle %with accuracy more than 70\%
-\end{itemize}
-\head{Dining Philosophers: A Synchronisation Problem}\rhsmall{Jan 2022 - May 2022}\\
-\lhsmall{Guide: Prof. Mythili Vutukuru}\rhsmalle{CS347 $\mid$ Operating Systems $\mid$ Course Project}
-\begin{itemize}
-	\item Modelled the threads by creating custom semaphores using condition variables and mutex abstractions of \textbf{pthreads} API
-	\item Devised and implemented two solutions by using \textbf{semaphores} and \textbf{condition variables} each and proved their correctness
+	% \item Verified the approach by using Kaggle's \textbf{Retinal OCT} dataset and analysed loss of information due to spatial segmentation%\textbf{CINIC-10} Datasets on Kaggle %with accuracy more than 70\%
 \end{itemize}
 \section{Positions of Responsibility}
 \vspace{-0.2em}
-% \head{Teaching Assistant $\mid$ Computer Programming and Utilization $\mid$ Multivariable Control}\\
-\head{Teaching Assistant $\mid$ Computer Programming and Utilisation}\rhsmalle{Autumn 2020, Autumn 2021, Spring 2022, Autumn 2022}
-\begin{itemize}
-	\item Academically guided \textbf{50} students, personally cleared their doubts, prepared and evaluated examinations \& lab problems
-	\item Brainstormed \textbf{60+ practice problems} for CS101, shared via a personal \textbf{webpage} with tips and resources to boost interest% and more resources% to enhance interest%understanding
-\end{itemize}
 \head{IIT Bombay Racing $\mid$ Junior Design Engineer $\mid$ Electrical Subsystem}\rhsmalle{Sep 2020 - May 2021}
 % {\small\textsl{Faculty Advisor: Prof. Amber Shrivastava}}\\% $\mid$ Dept. Of Mechanical Engineering, IIT Bombay}
 % {\small\textsl{A cross-functional team of 70+ students which designs, fabricates and assembles an Electric Race Car for Formula Student (FS) UK}}\\[-12pt]% an international studnets race car} 
@@ -127,6 +128,12 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 	\item Explored Electromagnetic Interference (\textbf{EMI}) reduction techniques to be incorporated into PCB designs of the subsystem
 	% \item \textbf{Mentored} 3 trainees in understanding the subsystem through the FS rulebook, circuit design tasks, and LTspice simulations
 	% \item Doing integrated testing of the electrical components in the car
+\end{itemize}
+% \head{Teaching Assistant $\mid$ Computer Programming and Utilization $\mid$ Multivariable Control}\\
+\head{Teaching Assistant $\mid$ Computer Programming and Utilisation}\rhsmalle{Autumn 2020, Autumn 2021, Spring 2022, Autumn 2022}
+\begin{itemize}
+	\item Academically guided \textbf{50} students, personally cleared their doubts, prepared and evaluated examinations \& lab problems
+	\item Brainstormed \textbf{60+ practice problems} for CS101, shared via a personal \textbf{webpage} with tips and resources to boost interest% and more resources% to enhance interest%understanding
 \end{itemize}
 \section{Technical Skills}
 \setlength\tabcolsep{0.3em}
@@ -141,19 +148,19 @@ Pursuing a \textbf{Minor} in \textbf{Computer Science \& Engineering}
 \vspace{-0.5em}
 \begin{tabular}{p{0.99in}p{6.01in}}
 \vspace{-0.5em}
-\small\textbf{Volunteering}\newline{\scriptsize\textsl{(2019-2022)}} & \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{Volunteering} & \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
 \begin{itemize}
-	\item Contributed to Career Counselling Campaign for 12,000+ indigent students by \textbf{Abhyuday} and \textbf{NCC}
-	\item \textbf{Mentored} students appearing for JEE during the \textbf{COVID-19} crisis as a part of \textbf{CovEd Education}% initiative%{\footnotesize\hfill\textsl{(2020)}}
+	% \item Conducted an institute-wide \textbf{Computer Programming} session (TSC) attended by {100+ students}\ \rhsmall{2022}% and discussing doubts \& previous year papers, organized by the Student Support Services, IIT Bombay%solving%
+	\item Contributed to Career Counselling Campaign for 12,000+ indigent students by \textbf{Abhyuday}\ \rhsmall{2019}
+	% \item \textbf{Mentored} JEE students during the \textbf{COVID-19} crisis as a part of \textbf{CovEd Education}\ \rhsmall{2020}% initiative%{\footnotesize\hfill\textsl{(2020)}}
 \end{itemize}\\[-1em]\hline
 \vspace{-0.5em}
-\small\textbf{Miscellaneous}\newline{\scriptsize\textsl{(2019-2022)}}	& \vspace{-0.5em}%{\tiny\textsl{(2019-2020)}}
+\small\textbf{Miscellaneous}	& \vspace{-0.5em}
 \begin{itemize}
-	% \item Built a \textbf{RC Bot} capable of negotiating obstacles and designed \& fabricated a \textbf{RC Trainer Plane}%\rhs{2019}
-	\item Composed articles on exciting labs and scientific content as an \textbf{Editor} of the Department Newsletter 
-	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay%{\footnotesize\hfill\textsl{(2019--20)}}
-	\item Part of the \textbf{Inter-Department E-Sports} Fest winning squad representing the \textbf{Smashkarts} team
-\end{itemize}
+	\item Composed articles on exciting labs and scientific content as an \textbf{Editor} of Department Newsletter\ \rhsmall{2020}%11 June 2020
+	\item Completed a year-long \textbf{training program} as \textbf{NCC Cadet} under 2 MER NCC at IIT Bombay\ \rhsmall{2019}%{\footnotesize\hfill\textsl{(2019--20)}}
+	% \item Part of the \textbf{Inter-Department E-Sports} Fest winning squad representing the \textbf{Smashkarts} team\ \rhsmall{2022}
+\end{itemize}%\\[-1em]\hline
 \end{tabular}
 \end{document}
 %% end of file `template.tex'.
